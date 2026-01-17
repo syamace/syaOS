@@ -46,7 +46,7 @@ interface WindowFrameProps {
   menuBar?: React.ReactNode; // Add menuBar prop
   // Keep content mounted when minimized (useful for audio/video apps)
   keepMountedWhenMinimized?: boolean;
-  // Fullscreen toggle callback (for apps like iPod and Karaoke that support fullscreen)
+  // Fullscreen toggle callback (for apps like iPod that support fullscreen)
   onFullscreenToggle?: () => void;
   // Disable auto-hide for notitlebar material (keeps titlebar always visible)
   disableTitlebarAutoHide?: boolean;

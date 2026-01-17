@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "sonner";
-import { ArrowLeft, Trash, MusicNote, Clock, User, VinylRecord, Hash, ArrowSquareOut, Warning, ArrowsClockwise, Microphone, UserMinus, Translate, FileText, TextT, Ear, Check, X, ArrowCounterClockwise, MagnifyingGlass } from "@phosphor-icons/react";
+import { ArrowLeft, Trash, MusicNote, Clock, User, VinylRecord, Hash, ArrowSquareOut, Warning, ArrowsClockwise, UserMinus, Translate, FileText, TextT, Ear, Check, X, ArrowCounterClockwise, MagnifyingGlass } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,7 +14,6 @@ import { getApiUrl } from "@/utils/platform";
 import { ActivityIndicator } from "@/components/ui/activity-indicator";
 import { useAppStore } from "@/stores/useAppStore";
 import { useIpodStore } from "@/stores/useIpodStore";
-import { useKaraokeStore } from "@/stores/useKaraokeStore";
 import { useLaunchApp } from "@/hooks/useLaunchApp";
 
 interface FuriganaSegment {
@@ -297,35 +296,6 @@ export const SongDetailPanel: React.FC<SongDetailPanelProps> = ({
     }
   }, [youtubeId, launchApp, t]);
 
-  // Play song in Karaoke
-  const handlePlayInKaraoke = useCallback(async () => {
-    // Ensure Karaoke is open
-    const appState = useAppStore.getState();
-    const karaokeInstances = appState.getInstancesByAppId("karaoke");
-    const hasOpenKaraokeInstance = karaokeInstances.some((inst) => inst.isOpen);
-    if (!hasOpenKaraokeInstance) {
-      launchApp("karaoke");
-    }
-
-    const ipodStore = useIpodStore.getState();
-    const karaokeStore = useKaraokeStore.getState();
-    const trackExists = ipodStore.tracks.some((t) => t.id === youtubeId);
-
-    if (!trackExists) {
-      // Song not in library, add it first
-      toast.info(t("apps.admin.messages.addingToLibrary", "Adding to library..."));
-      const track = await ipodStore.addTrackFromVideoId(youtubeId, false);
-      if (!track) {
-        toast.error(t("apps.admin.errors.failedToAddToLibrary", "Failed to add to library"));
-        return;
-      }
-    }
-
-    // Song is now in library, play it
-    karaokeStore.setCurrentSongId(youtubeId);
-    karaokeStore.setIsPlaying(true);
-    toast.success(t("apps.admin.messages.playingInKaraoke", "Playing in Karaoke"));
-  }, [youtubeId, launchApp, t]);
 
   useEffect(() => {
     fetchSong();
@@ -583,13 +553,6 @@ export const SongDetailPanel: React.FC<SongDetailPanelProps> = ({
               >
                 <MusicNote className="h-3 w-3" weight="bold" />
                 <span>{t("apps.admin.song.playInIpod", "Play in iPod")}</span>
-              </button>
-              <button
-                onClick={handlePlayInKaraoke}
-                className="aqua-button secondary h-7 px-3 text-[11px] flex items-center gap-1"
-              >
-                <Microphone className="h-3 w-3" weight="bold" />
-                <span>{t("apps.admin.song.playInKaraoke", "Play in Karaoke")}</span>
               </button>
               <button
                 onClick={() => setIsLyricsSearchDialogOpen(true)}

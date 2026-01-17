@@ -118,20 +118,15 @@ export type { SettingsInput } from "./settingsHandler";
 export { handleIpodControl } from "./ipodHandler";
 export type { IpodControlInput } from "./ipodHandler";
 
-export { handleKaraokeControl } from "./karaokeHandler";
-export type { KaraokeControlInput } from "./karaokeHandler";
-
 // ============================================================================
 // Register tool handlers for automatic dispatch (optional)
 // ============================================================================
 
 import { handleSettings } from "./settingsHandler";
 import { handleIpodControl } from "./ipodHandler";
-import { handleKaraokeControl } from "./karaokeHandler";
 
 registerToolHandler("settings", handleSettings);
 registerToolHandler("ipodControl", handleIpodControl);
-registerToolHandler("karaokeControl", handleKaraokeControl);
 
 // Note: launchApp and closeApp handlers require additional context (closeAppLegacy)
 // so they are called directly from useAiChat rather than through the registry

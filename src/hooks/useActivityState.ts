@@ -36,7 +36,7 @@ export interface UseActivityStateParams {
 /**
  * Consolidates loading states from useLyrics and useFurigana into a single ActivityInfo object.
  * 
- * This extracts the common pattern used in IpodAppComponent and KaraokeAppComponent
+ * This extracts the common pattern used in IpodAppComponent
  * for building the activity state object that drives loading indicators.
  * 
  * @param params - State from lyrics and furigana hooks, plus additional context

@@ -870,10 +870,10 @@ export const useIpodStore = create<IpodState>()(
           try {
             const url = new URL(input);
 
-            // Handle app-base/ipod/:id or app-base/karaoke/:id format
+            // Handle app-base/ipod/:id format
             if (
               url.hostname === new URL(getBaseUrl()).hostname &&
-              (url.pathname.startsWith("/ipod/") || url.pathname.startsWith("/karaoke/"))
+              url.pathname.startsWith("/ipod/")
             ) {
               return url.pathname.split("/")[2] || null;
             }

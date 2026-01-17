@@ -12,7 +12,6 @@ import { useInternetExplorerStore } from "@/stores/useInternetExplorerStore";
 import { getApiUrl } from "@/utils/platform";
 import { useVideoStore } from "@/stores/useVideoStore";
 import { useIpodStore } from "@/stores/useIpodStore";
-import { useKaraokeStore } from "@/stores/useKaraokeStore";
 import { toast } from "@/hooks/useToast";
 import { useLaunchApp } from "@/hooks/useLaunchApp";
 import { AppId } from "@/config/appIds";
@@ -43,13 +42,11 @@ import {
   handleCloseApp,
   handleSettings,
   handleIpodControl,
-  handleKaraokeControl,
   type ToolContext,
   type LaunchAppInput,
   type CloseAppInput,
   type SettingsInput,
   type IpodControlInput,
-  type KaraokeControlInput,
 } from "../tools";
 
 /**
@@ -283,7 +280,6 @@ const getSystemState = () => {
   const ieStore = useInternetExplorerStore.getState();
   const videoStore = useVideoStore.getState();
   const ipodStore = useIpodStore.getState();
-  const karaokeStore = useKaraokeStore.getState();
   const textEditStore = useTextEditStore.getState();
   const chatsStore = useChatsStore.getState();
   const languageStore = useLanguageStore.getState();
@@ -291,11 +287,6 @@ const getSystemState = () => {
   const currentVideo = videoStore.getCurrentVideo();
   const currentTrack = ipodStore.currentSongId
     ? ipodStore.tracks.find((t) => t.id === ipodStore.currentSongId)
-    : ipodStore.tracks[0] ?? null;
-  
-  // Karaoke uses the shared track library from iPod store
-  const karaokeCurrentTrack = karaokeStore.currentSongId
-    ? ipodStore.tracks.find((t) => t.id === karaokeStore.currentSongId)
     : ipodStore.tracks[0] ?? null;
 
   // Detect user's operating system
@@ -435,16 +426,6 @@ const getSystemState = () => {
         : null,
       isPlaying: ipodStore.isPlaying,
       currentLyrics: ipodStore.currentLyrics,
-    },
-    karaoke: {
-      currentTrack: karaokeCurrentTrack
-        ? {
-            id: karaokeCurrentTrack.id,
-            title: karaokeCurrentTrack.title,
-            artist: karaokeCurrentTrack.artist,
-          }
-        : null,
-      isPlaying: karaokeStore.isPlaying,
     },
     textEdit: {
       instances: textEditInstancesData,
@@ -703,15 +684,6 @@ export function useAiChat(onPromptSetUsername?: () => void) {
           case "ipodControl": {
             await handleIpodControl(
               toolCall.input as IpodControlInput,
-              toolCall.toolCallId,
-              toolContext
-            );
-            result = ""; // Handler manages its own result
-            break;
-          }
-          case "karaokeControl": {
-            await handleKaraokeControl(
-              toolCall.input as KaraokeControlInput,
               toolCall.toolCallId,
               toolContext
             );

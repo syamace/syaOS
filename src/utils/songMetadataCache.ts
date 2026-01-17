@@ -2,7 +2,7 @@
  * Song metadata cache utilities
  * 
  * Provides functions to save and retrieve song metadata from Redis cache.
- * Used by iPod and Karaoke apps to share song metadata between users.
+ * Used by iPod app to share song metadata between users.
  * 
  * Uses the unified /api/song endpoint.
  */

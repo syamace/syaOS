@@ -9,7 +9,7 @@ import i18n from "@/lib/i18n";
 
 /**
  * Case-insensitive string inclusion check
- * Used by iPod and Karaoke handlers for track matching
+ * Used by iPod handler for track matching
  */
 export const ciIncludes = (
   source: string | undefined,
@@ -137,11 +137,6 @@ export const shouldDisableTranslation = (
 /**
  * Create iOS restriction message for music playback
  */
-export const getIOSRestrictionMessage = (appName: "iPod" | "Karaoke"): string => {
-  if (appName === "iPod") {
-    return i18n.t("apps.chats.toolCalls.ipodReady");
-  }
-  return i18n.t("apps.chats.toolCalls.karaokeReady", {
-    defaultValue: "Karaoke is ready. Tap play to start",
-  });
+export const getIOSRestrictionMessage = (): string => {
+  return i18n.t("apps.chats.toolCalls.ipodReady");
 };
