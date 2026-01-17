@@ -1433,7 +1433,7 @@ export const useIpodStore = create<IpodState>()(
 
 /**
  * Resolves the effective translation language.
- * If the stored value is "auto", returns the current ryOS locale language.
+ * If the stored value is "auto", returns the current syaOS locale language.
  * If null, returns null (meaning no translation / "Original").
  * Otherwise returns the stored language code.
  */

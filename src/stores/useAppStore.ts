@@ -113,7 +113,7 @@ interface AppStoreState extends AppManagerState {
   exposeMode: boolean;
   setExposeMode: (v: boolean) => void;
   
-  // ryOS version (fetched from version.json)
+  // syaOS version (fetched from version.json)
   ryOSVersion: string | null;
   ryOSBuildNumber: string | null;
   ryOSBuildTime: string | null;
@@ -153,7 +153,7 @@ const createUseAppStore = () =>
       exposeMode: false,
       setExposeMode: (v) => set({ exposeMode: v }),
 
-      // ryOS version (fetched from version.json)
+      // syaOS version (fetched from version.json)
       ryOSVersion: null,
       ryOSBuildNumber: null,
       ryOSBuildTime: null,

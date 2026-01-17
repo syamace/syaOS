@@ -245,7 +245,7 @@ export function KaraokeAppComponent({
     };
   }, [lyricsSourceOverride]);
 
-  // Resolve "auto" translation language to actual ryOS locale
+  // Resolve "auto" translation language to actual syaOS locale
   const effectiveTranslationLanguage = useMemo(
     () => getEffectiveTranslationLanguage(lyricsTranslationLanguage),
     [lyricsTranslationLanguage, i18n.language]

@@ -18,11 +18,11 @@ primeReactResources();
 // CHUNK LOAD ERROR HANDLING - Reload when old assets 404 after deployment
 // ============================================================================
 const handlePreloadError = (event: Event) => {
-  console.warn("[ryOS] Chunk load failed:", event);
+  console.warn("[syaOS] Chunk load failed:", event);
   
   // Don't reload if offline - it won't help and will cause a flash loop
   if (!navigator.onLine) {
-    console.warn("[ryOS] Skipping reload - device is offline");
+    console.warn("[syaOS] Skipping reload - device is offline");
     return;
   }
   
@@ -33,13 +33,13 @@ const handlePreloadError = (event: Event) => {
   
   // If we reloaded in the last 10 seconds, don't reload again
   if (lastReload && now - parseInt(lastReload, 10) < 10000) {
-    console.warn("[ryOS] Recently reloaded for stale bundle, skipping to prevent loop");
+    console.warn("[syaOS] Recently reloaded for stale bundle, skipping to prevent loop");
     return;
   }
   
   // Mark that we're reloading
   sessionStorage.setItem(reloadKey, String(now));
-  console.log("[ryOS] Reloading for fresh assets...");
+  console.log("[syaOS] Reloading for fresh assets...");
   window.location.reload();
 };
 

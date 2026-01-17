@@ -126,7 +126,7 @@ export const extractHtmlContent = (
   };
 };
 
-// Component to render ryOS Code Previews
+// Component to render syaOS Code Previews
 interface HtmlPreviewProps {
   htmlContent: string;
   appletTitle?: string;
@@ -685,7 +685,7 @@ export default function HtmlPreview({
       .replace(/[:.]/g, "-")
       .substring(0, 19);
     a.href = url;
-    a.download = `ryOS-generated-${timestamp}.html`;
+    a.download = `syaOS-generated-${timestamp}.html`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

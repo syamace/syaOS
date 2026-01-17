@@ -7,7 +7,7 @@ export const helpItems = [
     icon: "💬",
     title: "Chat with Ryo",
     description:
-      "Type your message to chat with Ryo, generate code, or get help with ryOS.",
+      "Type your message to chat with Ryo, generate code, or get help with syaOS.",
   },
   {
     icon: "📝",
