@@ -19,6 +19,7 @@ import { useAppStore } from "@/stores/useAppStore";
 import { setNextBootMessage } from "@/utils/bootMessage";
 import i18n from "@/lib/i18n";
 import { getApiUrl, isTauri } from "@/utils/platform";
+import { productName } from "@/config/branding";
 
 // Storage key for manifest timestamp (for cache invalidation)
 const MANIFEST_KEY = 'ryos:manifest-timestamp';
@@ -272,7 +273,7 @@ async function checkAndUpdate(isManual: boolean = false): Promise<void> {
     if (isManual) {
       const stored = getStoredVersion();
       toast.success('Already running the latest version', {
-        description: stored.version ? `ryOS ${stored.version} (${stored.buildNumber})` : undefined,
+        description: stored.version ? `${productName} ${stored.version} (${stored.buildNumber})` : undefined,
       });
     }
     return;
@@ -326,7 +327,7 @@ export async function forceRefreshCache(): Promise<void> {
   // If already on latest version, just show success message without reboot
   if (!isNewVersion) {
     toast.success('Already running the latest version', {
-      description: stored.version ? `ryOS ${stored.version} (${stored.buildNumber})` : undefined,
+      description: stored.version ? `${productName} ${stored.version} (${stored.buildNumber})` : undefined,
     });
     return;
   }

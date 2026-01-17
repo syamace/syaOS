@@ -282,8 +282,8 @@
           "title": "小程式商店"
         },
         "createWithRyosChat": {
-          "description": "請 ryOS 聊天為您建立自訂應用程式和小程式。分享您的想法並立即獲得可用的應用程式。",
-          "title": "使用 ryOS 聊天建立"
+          "description": "請 syaOS 聊天為您建立自訂應用程式和小程式。分享您的想法並立即獲得可用的應用程式。",
+          "title": "使用 syaOS 聊天建立"
         },
         "keepUpdated": {
           "description": "在「商店」選單中檢查更新以獲得已安裝小程式的最新版本。",
@@ -298,7 +298,7 @@
           "title": "分享小程式"
         },
         "viewApplets": {
-          "description": "開啟並執行從 ryOS 聊天儲存或從商店下載的小程式。",
+          "description": "開啟並執行從 syaOS 聊天儲存或從商店下載的小程式。",
           "title": "檢視小程式"
         }
       },
@@ -324,7 +324,7 @@
         "noAppletsOpen": "沒有開啟的小程式",
         "open": "開啟...",
         "openAppletStore": "開啟小程式商店",
-        "ryosApp": "ryOS 應用程式",
+        "ryosApp": "syaOS 應用程式",
         "shareApplet": "分享小程式...",
         "store": "商店",
         "untitled": "未命名",
@@ -401,7 +401,7 @@
       },
       "help": {
         "chatWithRyo": {
-          "description": "輸入訊息與 Ryo 聊天、產生程式碼或取得 ryOS 的協助。",
+          "description": "輸入訊息與 Ryo 聊天、產生程式碼或取得 syaOS 的協助。",
           "title": "與 Ryo 聊天"
         },
         "controlApps": {
@@ -468,7 +468,7 @@
         "listening": "聆聽中",
         "loginToChat": "登入聊天",
         "loginToContinue": "登入以繼續與 Ryo 聊天。",
-        "loginToRyOS": "登入 ryOS",
+        "loginToRyOS": "登入 syaOS",
         "newChat": "新聊天",
         "noTranscriptionText": "未收到轉錄文字。",
         "nudgeSent": "👋 *輕推已送出*",
@@ -676,7 +676,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "ElevenLabs 語音 ID",
       "formatFileSystem": "格式化檔案系統",
-      "formatFileSystemDescription": "這將清除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 ryOS 將重新啟動。",
+      "formatFileSystemDescription": "這將清除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 syaOS 將重新啟動。",
       "help": {
         "aiModel": {
           "description": "選擇聊天和終端機助理使用的 AI 模型",
@@ -710,7 +710,7 @@
       "logIn": "登入",
       "logOut": "登出",
       "logOutOfAllDevices": "登出所有裝置",
-      "loggedInToRyOS": "已登入 ryOS",
+      "loggedInToRyOS": "已登入 syaOS",
       "loggingOut": "登出中...",
       "login": "登入",
       "loginToSendMessages": "登入以傳送訊息及更多功能",
@@ -737,7 +737,7 @@
       "resetAllSettings": "重設所有設定",
       "resetAllSettingsDescription": "這將清除所有已儲存的設定並還原為預設值。",
       "restore": "還原",
-      "ryOSAccount": "ryOS 帳戶",
+      "syaOSAccount": "syaOS 帳戶",
       "screenSaver": "螢幕保護程式",
       "screenSaverDescription": "在閒置一段時間後啟用",
       "screenSaverExitHint": "點擊或按下任何鍵即可退出",
@@ -2111,7 +2111,7 @@
     "aboutThisMac": {
       "builtInMemory": "內建記憶體",
       "clickToToggle": "按一下以切換",
-      "description": "關於此電腦上的 ryOS 資訊",
+      "description": "關於此電腦上的 syaOS 資訊",
       "largestUnusedBlock": "最大未用區塊",
       "mb": "MB",
       "system": "系統",
@@ -2151,7 +2151,7 @@
     "auth": {
       "createAccount": "建立帳戶",
       "creatingAccount": "正在建立...",
-      "dialogTitle": "ryOS 登入",
+      "dialogTitle": "syaOS 登入",
       "logIn": "登入",
       "logOut": "登出",
       "logOutDescription": "您確定要登出嗎？您將會從您的帳戶登出。",
@@ -2246,8 +2246,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "未命名 Applet",
-      "codePreviewTitle": "ryOS 程式碼預覽",
-      "codePreviewTitleFullscreen": "ryOS 程式碼預覽全螢幕",
+      "codePreviewTitle": "syaOS 程式碼預覽",
+      "codePreviewTitleFullscreen": "syaOS 程式碼預覽全螢幕",
       "copyHtml": "複製 HTML 程式碼",
       "downloadHtml": "下載 HTML",
       "exitFullscreen": "結束全螢幕",
@@ -2328,16 +2328,16 @@
     "system": {
       "debugBootScreenTest": "偵錯開機畫面測試...",
       "formatFileSystem": "格式化檔案系統",
-      "formatFileSystemDesc": "您確定要格式化檔案系統嗎？這將永久刪除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 ryOS 將重新啟動。",
+      "formatFileSystemDesc": "您確定要格式化檔案系統嗎？這將永久刪除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 syaOS 將重新啟動。",
       "formattingFileSystem": "格式化檔案系統...",
       "rebooting": "重新開機中...",
       "resetAllSettings": "重設所有設定",
-      "resetAllSettingsDesc": "您確定要重設所有設定嗎？這將清除所有已儲存的設定並還原為預設狀態。重設後 ryOS 將重新啟動。",
+      "resetAllSettingsDesc": "您確定要重設所有設定嗎？這將清除所有已儲存的設定並還原為預設狀態。重設後 syaOS 將重新啟動。",
       "resettingSystem": "重設系統中...",
       "restoringSystem": "還原系統中...",
       "systemRestoring": "系統還原中...",
-      "updatingToRyOS": "更新至 ryOS {{version}}...",
-      "updatingToRyOSWithBuild": "更新至 ryOS {{version}} ({{buildNumber}})..."
+      "updatingToRyOS": "更新至 syaOS {{version}}...",
+      "updatingToRyOSWithBuild": "更新至 syaOS {{version}} ({{buildNumber}})..."
     },
     "toast": {
       "alreadyLatestVersion": "已經是最新版本",
@@ -2348,7 +2348,7 @@
       "noAssetsToCache": "無資產可快取",
       "reboot": "重新啟動",
       "total": "總計",
-      "updateReady": "ryOS {{version}} ({{buildNumber}}) 的更新已就緒",
+      "updateReady": "syaOS {{version}} ({{buildNumber}}) 的更新已就緒",
       "updatingAssets": "正在更新資產",
       "updatingIcons": "正在更新圖示",
       "updatingSounds": "正在更新音效",
@@ -2372,7 +2372,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "選擇您的 ryOS 介面偏好語言",
+      "description": "選擇您的 syaOS 介面偏好語言",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

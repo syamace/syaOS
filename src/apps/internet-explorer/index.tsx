@@ -1,5 +1,6 @@
 import { BaseApp, InternetExplorerInitialData } from "../base/types";
 import { InternetExplorerAppComponent } from "./components/InternetExplorerAppComponent";
+import { githubRepo } from "@/config/branding";
 
 export const helpItems = [
   {
@@ -47,7 +48,7 @@ export const appMetadata = {
     name: "Ryo Lu",
     url: "https://ryo.lu",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: githubRepo,
   icon: "/icons/default/ie.png",
 };
 

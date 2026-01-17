@@ -1,4 +1,4 @@
-// Utility helpers for IndexedDB operations used across ryOS
+// Utility helpers for IndexedDB operations used across syaOS
 
 const DB_NAME = "ryOS";
 const DB_VERSION = 7; // Force APPLETS store creation
@@ -12,7 +12,7 @@ export const STORES = {
 } as const;
 
 /**
- * Open (or create) the ryOS IndexedDB database and ensure all required
+ * Open (or create) the syaOS IndexedDB database and ensure all required
  * object stores exist.  Returns a ready-to-use IDBDatabase instance.
  */
 export const ensureIndexedDBInitialized = async (): Promise<IDBDatabase> => {

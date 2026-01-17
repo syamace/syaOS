@@ -1,6 +1,6 @@
 # Audio System
 
-Overview of ryOS audio capabilities and architecture.
+Overview of syaOS audio capabilities and architecture.
 
 ## Technologies
 
@@ -102,7 +102,7 @@ source.stop(0);
 
 ## Audio Playback
 
-ryOS provides multiple audio playback mechanisms:
+syaOS provides multiple audio playback mechanisms:
 
 ### iPod App
 

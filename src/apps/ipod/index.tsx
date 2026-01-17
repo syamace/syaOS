@@ -1,5 +1,6 @@
 import { BaseApp, IpodInitialData } from "../base/types";
 import { IpodAppComponent } from "./components/IpodAppComponent";
+import { githubRepo } from "@/config/branding";
 
 export const helpItems = [
   {
@@ -41,7 +42,7 @@ export const appMetadata = {
     name: "Ryo Lu",
     url: "https://ryo.lu",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: githubRepo,
   icon: "/icons/default/ipod.png",
 };
 

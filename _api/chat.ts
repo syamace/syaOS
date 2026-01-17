@@ -26,6 +26,7 @@ import { checkAndIncrementAIMessageCount } from "./_utils/_rate-limit.js";
 import { Redis } from "@upstash/redis";
 import { validateAuthToken } from "./_utils/_auth-validate.js";
 import { getEffectiveOrigin, isAllowedOrigin } from "./_utils/_cors.js";
+import { PRODUCT_NAME } from "./_utils/_branding.js";
 
 // Central list of supported theme IDs for tool validation
 const themeIds = ["system7", "macosx", "xp", "win98"] as const;
@@ -770,7 +771,7 @@ export default async function handler(req: Request) {
       tools: {
         launchApp: {
           description:
-            "Launch an application in the ryOS interface when the user explicitly requests it. If the id is 'internet-explorer', you must provide BOTH a real 'url' and a 'year' for time-travel; otherwise provide neither.",
+            `Launch an application in the ${PRODUCT_NAME} interface when the user explicitly requests it. If the id is 'internet-explorer', you must provide BOTH a real 'url' and a 'year' for time-travel; otherwise provide neither.`,
           inputSchema: z
             .object({
               id: z.enum(appIds).describe("The app id to launch"),
@@ -841,7 +842,7 @@ export default async function handler(req: Request) {
         },
         closeApp: {
           description:
-            "Close an application in the ryOS interface—but only when the user explicitly asks you to close that specific app.",
+            `Close an application in the ${PRODUCT_NAME} interface—but only when the user explicitly asks you to close that specific app.`,
           inputSchema: z.object({
             id: z.enum(appIds).describe("The app id to close"),
           }),
@@ -861,7 +862,7 @@ export default async function handler(req: Request) {
         // --- HTML generation & preview ---
         generateHtml: {
           description:
-            "Generate an HTML snippet for an ryOS Applet: a small windowed app (default ~320px wide) that runs inside ryOS, not the full page. Design mobile-first for ~320px width but keep layouts responsive to expand gracefully. Provide markup in 'html', a short 'title', and an 'icon' (emoji). DO NOT wrap it in markdown fences; the client will handle scaffolding.",
+            `Generate an HTML snippet for a ${PRODUCT_NAME} Applet: a small windowed app (default ~320px wide) that runs inside ${PRODUCT_NAME}, not the full page. Design mobile-first for ~320px width but keep layouts responsive to expand gracefully. Provide markup in 'html', a short 'title', and an 'icon' (emoji). DO NOT wrap it in markdown fences; the client will handle scaffolding.`,
           inputSchema: z.object({
             html: z
               .string()
@@ -906,7 +907,7 @@ export default async function handler(req: Request) {
         // --- Unified Virtual File System Tools ---
         list: {
           description:
-            "List items from the ryOS virtual file system. Returns a JSON array with metadata for each item. CRITICAL: You MUST ONLY reference items that are explicitly returned in the tool result. DO NOT suggest, mention, or hallucinate items that are not in the returned list.",
+            `List items from the ${PRODUCT_NAME} virtual file system. Returns a JSON array with metadata for each item. CRITICAL: You MUST ONLY reference items that are explicitly returned in the tool result. DO NOT suggest, mention, or hallucinate items that are not in the returned list.`,
           inputSchema: z.object({
             path: z
               .enum(["/Applets", "/Documents", "/Applications", "/Music", "/Applets Store"])
@@ -988,7 +989,7 @@ export default async function handler(req: Request) {
         },
         edit: {
           description:
-            "Edit existing files in the ryOS virtual file system. For creating new files, use the write tool (documents) or generateHtml tool (applets). For larger rewrites, use write with mode 'overwrite'.\n\n" +
+            `Edit existing files in the ${PRODUCT_NAME} virtual file system. For creating new files, use the write tool (documents) or generateHtml tool (applets). For larger rewrites, use write with mode 'overwrite'.\n\n` +
             "Before using this tool:\n" +
             "1. Use the read tool to understand the file's contents and context\n" +
             "2. Verify the file exists using list\n\n" +
@@ -1156,7 +1157,7 @@ export default async function handler(req: Request) {
         // --- System Settings Tool ---
         settings: {
           description:
-            "Change system settings in ryOS. Use this tool when the user asks to change language, theme, volume, enable/disable speech, or check for updates. Multiple settings can be changed in a single call.",
+            `Change system settings in ${PRODUCT_NAME}. Use this tool when the user asks to change language, theme, volume, enable/disable speech, or check for updates. Multiple settings can be changed in a single call.`,
           inputSchema: z.object({
             language: z
               .enum(["en", "zh-TW", "ja", "ko", "fr", "de", "es", "pt", "it", "ru"])
@@ -1188,7 +1189,7 @@ export default async function handler(req: Request) {
               .boolean()
               .optional()
               .describe(
-                "When true, triggers a check for ryOS updates. Will notify the user if an update is available."
+                `When true, triggers a check for ${PRODUCT_NAME} updates. Will notify the user if an update is available.`
               ),
           }),
         },

@@ -146,7 +146,7 @@ async function readAppIndex(appId: string): Promise<{
             name: "Ryo Lu",
             url: "https://ryo.lu",
           },
-          github: "https://github.com/ryokun6/ryos",
+          github: process.env.GITHUB_REPO || "https://github.com/syamace/syaOS",
           icon: iconMatch ? iconMatch[1] : "/icons/default/question.png",
         };
       }

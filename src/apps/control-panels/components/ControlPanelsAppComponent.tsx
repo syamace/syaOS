@@ -44,6 +44,7 @@ import { OsThemeId } from "@/themes/types";
 import { getTabStyles } from "@/utils/tabStyles";
 import { useLanguageStore, type LanguageCode } from "@/stores/useLanguageStore";
 import { useTranslation } from "react-i18next";
+import { githubRepo, productName } from "@/config/branding";
 
 interface StoreItem {
   name: string;
@@ -215,12 +216,12 @@ function VersionDisplay() {
   
   return (
     <p className="text-[11px] text-neutral-600 font-geneva-12">
-      ryOS {displayVersion}{displayBuild}
+      {productName} {displayVersion}{displayBuild}
       {isMac && desktopVersion && (
         <>
           {" · "}
           <a 
-            href={`https://github.com/ryokun6/ryos/releases/download/v${desktopVersion}/ryOS_${desktopVersion}_aarch64.dmg`}
+            href={`${githubRepo}/releases/download/v${desktopVersion}/syaOS_${desktopVersion}_aarch64.dmg`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"

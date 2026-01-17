@@ -1,3 +1,5 @@
+import { getBaseUrl } from "@/config/branding";
+
 /**
  * Platform detection utilities
  */
@@ -18,12 +20,12 @@ export function isWeb(): boolean {
 
 /**
  * Get the API base URL.
- * In Tauri (desktop app), returns the production API URL.
+ * In Tauri (desktop app), returns the app base URL (where the WebView loads from).
  * In web browser, returns empty string for relative paths.
  */
 export function getApiBaseUrl(): string {
   if (isTauri()) {
-    return "https://os.ryo.lu";
+    return getBaseUrl();
   }
   return "";
 }
@@ -32,7 +34,7 @@ export function getApiBaseUrl(): string {
  * Get the full API URL for a given path.
  * Automatically handles Tauri vs web differences.
  * @param path - API path (e.g., "/api/chat")
- * @returns Full URL (e.g., "https://os.ryo.lu/api/chat" in Tauri, "/api/chat" in web)
+ * @returns Full URL (e.g., base + "/api/chat" in Tauri, "/api/chat" in web)
  */
 export function getApiUrl(path: string): string {
   const baseUrl = getApiBaseUrl();

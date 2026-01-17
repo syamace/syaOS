@@ -44,6 +44,7 @@ import { useTranslation } from "react-i18next";
 import { getTranslatedAppName } from "@/utils/i18n";
 import { useIsPhone } from "@/hooks/useIsPhone";
 import { isTauri, isTauriWindows } from "@/utils/platform";
+import { githubRepo } from "@/config/branding";
 
 // Helper function to get app name (using translations)
 const getAppName = (appId: string): string => {
@@ -75,7 +76,7 @@ const finderMetadata = {
     name: "Ryo Lu",
     url: "https://ryo.lu",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: githubRepo,
   icon: "/icons/mac.png",
 };
 

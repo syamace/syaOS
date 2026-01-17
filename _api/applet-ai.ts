@@ -12,6 +12,7 @@ import {
   isAllowedOrigin,
   preflightIfNeeded,
 } from "./_utils/_cors.js";
+import { APP_BASE_URL, PRODUCT_NAME } from "./_utils/_branding.js";
 import * as RateLimit from "./_utils/_rate-limit.js";
 import { Redis } from "@upstash/redis";
 import { validateAuthToken } from "./_utils/_auth-validate.js";
@@ -25,7 +26,7 @@ export const config = {
 
 const APPLET_SYSTEM_PROMPT = `
 <applet_ai>
-You are an AI assistant embedded inside a sandboxed ryOS applet window.
+You are an AI assistant embedded inside a sandboxed ${PRODUCT_NAME} applet window.
 - Reply with clear, helpful answers that fit inside compact UI components.
 - Keep responses concise unless the request explicitly demands more detail.
 - Prefer plain text. Use markdown only when the user specifically asks for formatting.
@@ -115,8 +116,7 @@ const RequestSchema = z
   );
 
 const ALLOWED_HOSTS = new Set([
-  "os.ryo.lu",
-  "ryo.lu",
+  new URL(APP_BASE_URL).hostname,
   "localhost:3000",
   "localhost:5173",
   "127.0.0.1:3000",

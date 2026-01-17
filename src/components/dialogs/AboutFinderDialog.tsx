@@ -15,6 +15,7 @@ import { useMemo, useState, useEffect } from "react";
 import { ThemedIcon } from "@/components/shared/ThemedIcon";
 import { getTranslatedAppName } from "@/utils/i18n";
 import type { AppId } from "@/config/appRegistry";
+import { githubRepo, productName } from "@/config/branding";
 
 interface AboutFinderDialogProps {
   isOpen: boolean;
@@ -118,7 +119,7 @@ export function AboutFinderDialog({
                     : "font-apple-garamond text-2xl "
                 )}
               >
-                ryOS
+                {productName}
                 {currentTheme === "system7"
                   ? " 7"
                   : currentTheme === "macosx"
@@ -181,11 +182,11 @@ export function AboutFinderDialog({
                       : undefined,
                   }}
                 >
-                  <p>© Ryo Lu. 1992-{new Date().getFullYear()}</p>
+                  <p>© Sya Mace. 1992-{new Date().getFullYear()}</p>
                   {isMac && desktopVersion && (
                     <p>
                       <a 
-                        href={`https://github.com/ryokun6/ryos/releases/download/v${desktopVersion}/ryOS_${desktopVersion}_aarch64.dmg`}
+                        href={`${githubRepo}/releases/download/v${desktopVersion}/syaOS_${desktopVersion}_aarch64.dmg`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:underline"

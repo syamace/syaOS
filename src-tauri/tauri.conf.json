@@ -1,7 +1,7 @@
 {
-  "productName": "ryOS",
+  "productName": "syaOS",
   "version": "1.0.1",
-  "identifier": "lu.ryo.os",
+  "identifier": "io.sya.os",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",
@@ -42,7 +42,7 @@
     ],
     "resources": [],
     "externalBin": [],
-    "copyright": "Copyright Ryo Lu",
+    "copyright": "Copyright Sya Mace",
     "category": "Utility",
     "shortDescription": "An AI OS experience",
     "longDescription": "An AI OS experience, made with Cursor",

@@ -7,8 +7,9 @@ import { getApiUrl } from "@/utils/platform";
 import { getCachedSongMetadata, listAllCachedSongMetadata } from "@/utils/songMetadataCache";
 import i18n from "@/lib/i18n";
 import { useChatsStore } from "./useChatsStore";
+import { getBaseUrl } from "@/config/branding";
 
-/** Special value for lyricsTranslationLanguage that means "use ryOS locale" */
+/** Special value for lyricsTranslationLanguage that means "use syaOS locale" */
 export const LYRICS_TRANSLATION_AUTO = "auto";
 
 /** Lyrics source from Kugou */
@@ -869,9 +870,9 @@ export const useIpodStore = create<IpodState>()(
           try {
             const url = new URL(input);
 
-            // Handle os.ryo.lu/ipod/:id or os.ryo.lu/karaoke/:id format
+            // Handle app-base/ipod/:id or app-base/karaoke/:id format
             if (
-              url.hostname === "os.ryo.lu" &&
+              url.hostname === new URL(getBaseUrl()).hostname &&
               (url.pathname.startsWith("/ipod/") || url.pathname.startsWith("/karaoke/"))
             ) {
               return url.pathname.split("/")[2] || null;

@@ -1,5 +1,6 @@
 import { BaseApp } from "../base/types";
 import { PhotoBoothComponent } from "./components/PhotoBoothComponent";
+import { githubRepo } from "@/config/branding";
 
 export const appMetadata = {
   name: "Photo Booth",
@@ -8,7 +9,7 @@ export const appMetadata = {
     name: "Ryo Lu",
     url: "https://ryo.lu",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: githubRepo,
   icon: "/icons/default/photo-booth.png",
 };
 

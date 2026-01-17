@@ -41,6 +41,7 @@ import { useFilesStore } from "@/stores/useFilesStore";
 import { useThemeStore } from "@/stores/useThemeStore";
 import EmojiAquarium from "@/components/shared/EmojiAquarium";
 import i18n from "@/lib/i18n";
+import { githubRepo } from "@/config/branding";
 
 // Import new components and utilities
 import { CommandHistory, CommandContext, ToolInvocationData } from "../types";
@@ -2857,7 +2858,7 @@ export function TerminalAppComponent({
               name: "Ryo Lu",
               url: "https://ryo.lu",
             },
-            github: "https://github.com/ryokun6/ryos",
+            github: githubRepo,
             icon: "/icons/default/terminal.png",
           }
         }

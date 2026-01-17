@@ -282,8 +282,8 @@
           "title": "Applet-Store"
         },
         "createWithRyosChat": {
-          "description": "Bitten Sie ryOS Chat, benutzerdefinierte Apps und Applets für Sie zu erstellen. Teilen Sie Ihre Ideen und erhalten Sie sofort funktionierende Apps.",
-          "title": "Mit ryOS Chat erstellen"
+          "description": "Bitten Sie syaOS Chat, benutzerdefinierte Apps und Applets für Sie zu erstellen. Teilen Sie Ihre Ideen und erhalten Sie sofort funktionierende Apps.",
+          "title": "Mit syaOS Chat erstellen"
         },
         "keepUpdated": {
           "description": "Überprüfen Sie Updates im Store-Menü, um die neuesten Versionen Ihrer installierten Applets zu erhalten.",
@@ -298,7 +298,7 @@
           "title": "Applets teilen"
         },
         "viewApplets": {
-          "description": "Applets öffnen und ausführen, die von ryOS Chat gespeichert oder aus dem Store heruntergeladen wurden.",
+          "description": "Applets öffnen und ausführen, die von syaOS Chat gespeichert oder aus dem Store heruntergeladen wurden.",
           "title": "Applets anzeigen"
         }
       },
@@ -324,7 +324,7 @@
         "noAppletsOpen": "Keine Applets geöffnet",
         "open": "Öffnen...",
         "openAppletStore": "Applet Store öffnen",
-        "ryosApp": "ryOS App",
+        "ryosApp": "syaOS App",
         "shareApplet": "Applet teilen...",
         "store": "Store",
         "untitled": "Unbenannt",
@@ -401,7 +401,7 @@
       },
       "help": {
         "chatWithRyo": {
-          "description": "Geben Sie Ihre Nachricht ein, um mit Ryo zu chatten, Code zu generieren oder Hilfe zu ryOS zu erhalten.",
+          "description": "Geben Sie Ihre Nachricht ein, um mit Ryo zu chatten, Code zu generieren oder Hilfe zu syaOS zu erhalten.",
           "title": "Mit Ryo chatten"
         },
         "controlApps": {
@@ -468,7 +468,7 @@
         "listening": "Hören",
         "loginToChat": "Im Chat anmelden",
         "loginToContinue": "Anmelden, um weiter mit Ryo zu chatten.",
-        "loginToRyOS": "Bei ryOS anmelden",
+        "loginToRyOS": "Bei syaOS anmelden",
         "newChat": "Neuer Chat",
         "noTranscriptionText": "Kein Transkriptionstext empfangen",
         "nudgeSent": "👋 *Stupser gesendet*",
@@ -676,7 +676,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "ElevenLabs Sprach-ID",
       "formatFileSystem": "Dateisystem formatieren",
-      "formatFileSystemDescription": "Dadurch werden alle Dateien (außer Beispieldokumenten), Bilder und benutzerdefinierten Hintergrundbilder gelöscht. ryOS wird nach der Formatierung neu gestartet.",
+      "formatFileSystemDescription": "Dadurch werden alle Dateien (außer Beispieldokumenten), Bilder und benutzerdefinierten Hintergrundbilder gelöscht. syaOS wird nach der Formatierung neu gestartet.",
       "help": {
         "aiModel": {
           "description": "Wählen Sie das KI-Modell aus, das von Chats und Terminal-Assistent verwendet wird",
@@ -710,7 +710,7 @@
       "logIn": "Anmelden",
       "logOut": "Abmelden",
       "logOutOfAllDevices": "Von allen Geräten abmelden",
-      "loggedInToRyOS": "Bei ryOS angemeldet",
+      "loggedInToRyOS": "Bei syaOS angemeldet",
       "loggingOut": "Abmelden...",
       "login": "Anmelden",
       "loginToSendMessages": "Anmelden, um Nachrichten zu senden und mehr",
@@ -737,7 +737,7 @@
       "resetAllSettings": "Alle Einstellungen zurücksetzen",
       "resetAllSettingsDescription": "Dadurch werden alle gespeicherten Einstellungen gelöscht und die Standardwerte wiederhergestellt.",
       "restore": "Wiederherstellen",
-      "ryOSAccount": "ryOS-Konto",
+      "syaOSAccount": "syaOS-Konto",
       "screenSaver": "Bildschirmschoner",
       "screenSaverDescription": "Aktiviert sich nach einer Zeit der Inaktivität",
       "screenSaverExitHint": "Klicken oder eine beliebige Taste drücken zum Beenden",
@@ -2111,7 +2111,7 @@
     "aboutThisMac": {
       "builtInMemory": "Arbeitsspeicher",
       "clickToToggle": "Klicken zum Umschalten",
-      "description": "Informationen über ryOS auf diesem Computer",
+      "description": "Informationen über syaOS auf diesem Computer",
       "largestUnusedBlock": "Größter ungenutzter Block",
       "mb": "MB",
       "system": "System",
@@ -2151,7 +2151,7 @@
     "auth": {
       "createAccount": "Konto erstellen",
       "creatingAccount": "Wird erstellt...",
-      "dialogTitle": "ryOS-Login",
+      "dialogTitle": "syaOS-Login",
       "logIn": "Anmelden",
       "logOut": "Abmelden",
       "logOutDescription": "Möchten Sie sich wirklich abmelden? Sie werden von Ihrem Konto abgemeldet.",
@@ -2246,8 +2246,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "Unbenanntes Applet",
-      "codePreviewTitle": "ryOS Code-Vorschau",
-      "codePreviewTitleFullscreen": "ryOS Code-Vorschau im Vollbildmodus",
+      "codePreviewTitle": "syaOS Code-Vorschau",
+      "codePreviewTitleFullscreen": "syaOS Code-Vorschau im Vollbildmodus",
       "copyHtml": "HTML-Code kopieren",
       "downloadHtml": "HTML herunterladen",
       "exitFullscreen": "Vollbild verlassen",
@@ -2328,16 +2328,16 @@
     "system": {
       "debugBootScreenTest": "Debug-Startbildschirmtest...",
       "formatFileSystem": "Dateisystem formatieren",
-      "formatFileSystemDesc": "Möchten Sie wirklich das Dateisystem formatieren? Dies löscht dauerhaft alle Dokumente (außer Beispieldokumenten), Bilder und benutzerdefinierte Hintergrundbilder. ryOS startet nach dem Formatieren neu.",
+      "formatFileSystemDesc": "Möchten Sie wirklich das Dateisystem formatieren? Dies löscht dauerhaft alle Dokumente (außer Beispieldokumenten), Bilder und benutzerdefinierte Hintergrundbilder. syaOS startet nach dem Formatieren neu.",
       "formattingFileSystem": "Dateisystem wird formatiert...",
       "rebooting": "Neustart...",
       "resetAllSettings": "Alle Einstellungen zurücksetzen",
-      "resetAllSettingsDesc": "Möchten Sie wirklich alle Einstellungen zurücksetzen? Dies löscht alle gespeicherten Einstellungen und stellt die Standardzustände wieder her. ryOS startet nach dem Zurücksetzen neu.",
+      "resetAllSettingsDesc": "Möchten Sie wirklich alle Einstellungen zurücksetzen? Dies löscht alle gespeicherten Einstellungen und stellt die Standardzustände wieder her. syaOS startet nach dem Zurücksetzen neu.",
       "resettingSystem": "System wird zurückgesetzt...",
       "restoringSystem": "System wird wiederhergestellt...",
       "systemRestoring": "System wird wiederhergestellt...",
-      "updatingToRyOS": "Aktualisiere auf ryOS {{version}}...",
-      "updatingToRyOSWithBuild": "Aktualisiere auf ryOS {{version}} ({{buildNumber}})..."
+      "updatingToRyOS": "Aktualisiere auf syaOS {{version}}...",
+      "updatingToRyOSWithBuild": "Aktualisiere auf syaOS {{version}} ({{buildNumber}})..."
     },
     "toast": {
       "alreadyLatestVersion": "Die neueste Version ist bereits installiert.",
@@ -2348,7 +2348,7 @@
       "noAssetsToCache": "Keine Assets zum Cachen",
       "reboot": "Neustart",
       "total": "gesamt",
-      "updateReady": "Update für ryOS {{version}} ({{buildNumber}}) ist bereit",
+      "updateReady": "Update für syaOS {{version}} ({{buildNumber}}) ist bereit",
       "updatingAssets": "Assets werden aktualisiert",
       "updatingIcons": "Symbole werden aktualisiert",
       "updatingSounds": "Töne werden aktualisiert",
@@ -2372,7 +2372,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "Wählen Sie Ihre bevorzugte Sprache für die ryOS-Oberfläche",
+      "description": "Wählen Sie Ihre bevorzugte Sprache für die syaOS-Oberfläche",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

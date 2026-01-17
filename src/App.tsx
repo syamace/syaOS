@@ -14,6 +14,7 @@ import { useOffline } from "./hooks/useOffline";
 import { useTranslation } from "react-i18next";
 import { isTauri } from "./utils/platform";
 import { checkDesktopUpdate, onDesktopUpdate, DesktopUpdateResult } from "./utils/prefetch";
+import { githubRepo, productName } from "./config/branding";
 import { DownloadSimple } from "@phosphor-icons/react";
 import { ScreenSaverOverlay } from "./components/screensavers/ScreenSaverOverlay";
 
@@ -108,7 +109,7 @@ export function App() {
         // Mark as seen immediately so dismissing the toast won't show it again
         setLastSeenDesktopVersion(result.version);
         // New version available - show update toast (both web and Tauri)
-        toast(`ryOS ${result.version} for Mac is available`, {
+        toast(`${productName} ${result.version} for Mac is available`, {
           id: 'desktop-update',
           icon: <DownloadSimple className="h-4 w-4" weight="bold" />,
           duration: Infinity,
@@ -116,7 +117,7 @@ export function App() {
             label: "Download",
             onClick: () => {
               window.open(
-                `https://github.com/ryokun6/ryos/releases/download/v${result.version}/ryOS_${result.version}_aarch64.dmg`,
+                `${githubRepo}/releases/download/v${result.version}/syaOS_${result.version}_aarch64.dmg`,
                 "_blank"
               );
             },
@@ -126,7 +127,7 @@ export function App() {
         // Mark as seen immediately so dismissing the toast won't show it again
         setLastSeenDesktopVersion(result.version);
         // First time user on web - show initial download toast (not in Tauri)
-        toast("ryOS is available as a Mac app", {
+        toast(`${productName} is available as a Mac app`, {
           id: 'desktop-update',
           icon: <DownloadSimple className="h-4 w-4" weight="bold" />,
           duration: Infinity,
@@ -134,7 +135,7 @@ export function App() {
             label: "Download",
             onClick: () => {
               window.open(
-                `https://github.com/ryokun6/ryos/releases/download/v${result.version}/ryOS_${result.version}_aarch64.dmg`,
+                `${githubRepo}/releases/download/v${result.version}/syaOS_${result.version}_aarch64.dmg`,
                 "_blank"
               );
             },

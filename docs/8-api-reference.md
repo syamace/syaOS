@@ -1,6 +1,6 @@
 # API Reference
 
-ryOS uses Vercel Serverless Functions with Edge runtime for all backend APIs.
+syaOS uses Vercel Serverless Functions with Edge runtime for all backend APIs.
 
 ## API Request Flow
 

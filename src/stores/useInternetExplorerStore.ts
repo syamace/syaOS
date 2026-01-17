@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { getBaseUrl } from "@/config/branding";
 
 // Define types
 export interface Favorite {
@@ -13,8 +14,7 @@ export interface Favorite {
 
 // Define a constant for domains that bypass the proxy when in "now" mode
 export const DIRECT_PASSTHROUGH_DOMAINS = [
-  "baby-cursor.ryo.lu",
-  "os.ryo.lu",
+  "sya-os.vercel.app",
   "hcsimulator.com",
   "os.rocorgi.wang",
   "iso-city.com",
@@ -121,9 +121,9 @@ export const DEFAULT_FAVORITES: Favorite[] = [
     isDirectory: false,
   },
   {
-    title: "ryOS Docs",
-    url: "https://os.ryo.lu/docs",
-    favicon: "https://www.google.com/s2/favicons?domain=os.ryo.lu&sz=32",
+    title: "syaOS Docs",
+    url: `${getBaseUrl()}/docs`,
+    favicon: `https://www.google.com/s2/favicons?domain=${new URL(getBaseUrl()).hostname}&sz=32`,
     year: "current",
     isDirectory: false,
   },

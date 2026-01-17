@@ -1,8 +1,8 @@
 # Overview
 
-ryOS is a web-based desktop environment that brings the nostalgia of classic operating systems to modern browsers. Experience the charm of Mac OS X Aqua, System 7, Windows XP, and Windows 98—all running in your browser with 17 fully-functional apps, an AI assistant, and a complete virtual file system.
+syaOS is a web-based desktop environment that brings the nostalgia of classic operating systems to modern browsers. Experience the charm of Mac OS X Aqua, System 7, Windows XP, and Windows 98—all running in your browser with 17 fully-functional apps, an AI assistant, and a complete virtual file system.
 
-Whether you're exploring the retro aesthetics, building HTML applets, or chatting with Ryo (the AI assistant), ryOS offers a unique blend of nostalgia and modern web technology.
+Whether you're exploring the retro aesthetics, building HTML applets, or chatting with Ryo (the AI assistant), syaOS offers a unique blend of nostalgia and modern web technology.
 
 ```mermaid
 graph TB

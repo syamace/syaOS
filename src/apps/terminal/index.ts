@@ -1,3 +1,5 @@
+import { githubRepo } from "@/config/branding";
+
 export const helpItems = [
   {
     icon: "💻",
@@ -44,6 +46,6 @@ export const appMetadata = {
     name: "Ryo Lu",
     url: "https://ryo.lu",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: githubRepo,
   icon: "/icons/default/terminal.png",
 };

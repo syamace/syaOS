@@ -1,8 +1,8 @@
-# ryOS — A Web-Based Agentic AI OS, made with Cursor
+# syaOS — A Web-Based Agentic AI OS, made with Cursor
 
 A modern web-based desktop environment inspired by classic macOS and Windows, built with React, TypeScript, and AI. Features multiple built-in applications, a familiar desktop interface, and a system-aware AI assistant. Works on all devices—desktop, tablet, and mobile.
 
-**[Read ryOS Docs](https://os.ryo.lu/docs)** — Architecture, API reference, and developer guides
+**[Read syaOS Docs](https://sya-os.vercel.app/docs)** — Architecture, API reference, and developer guides
 
 ## Features
 

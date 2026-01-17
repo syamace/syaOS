@@ -147,8 +147,8 @@ export default defineConfig({
         "fonts/*.woff2",
       ],
       manifest: {
-        name: "ryOS",
-        short_name: "ryOS",
+        name: "syaOS",
+        short_name: "syaOS",
         description: "An AI OS experience, made with Cursor",
         theme_color: "#000000",
         background_color: "#000000",

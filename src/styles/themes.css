@@ -1371,7 +1371,7 @@
   border-radius: 0 !important;
 }
 
-/* Use Apple Garamond for ryOS branding in macOSX dialogs */
+/* Use Apple Garamond for syaOS branding in macOSX dialogs */
 :root[data-os-theme="macosx"] .macosx-dialog .font-mondwest {
   font-family: "AppleGaramond", "Apple Garamond", "Times New Roman", serif !important;
 }

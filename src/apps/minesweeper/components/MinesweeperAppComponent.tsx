@@ -13,6 +13,7 @@ import { isMobileDevice } from "@/utils/device";
 import { useThemeStore } from "@/stores/useThemeStore";
 import { getTranslatedAppName } from "@/utils/i18n";
 import { useTranslation } from "react-i18next";
+import { githubRepo } from "@/config/branding";
 
 const BOARD_SIZE = 9;
 const MINES_COUNT = 10;
@@ -566,7 +567,7 @@ export function MinesweeperAppComponent({
               name: "Minesweeper",
               version: "1.0.0",
               creator: { name: "Ryo Lu", url: "https://ryo.lu" },
-              github: "https://github.com/ryokun6/ryos",
+              github: githubRepo,
               icon: "/icons/default/minesweeper.png",
             }
           }

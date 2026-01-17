@@ -1,6 +1,6 @@
 # Apps
 
-ryOS includes 17 built-in applications, each designed to replicate classic desktop experiences while adding modern functionality.
+syaOS includes 17 built-in applications, each designed to replicate classic desktop experiences while adding modern functionality.
 
 ## App Overview
 

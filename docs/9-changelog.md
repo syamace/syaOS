@@ -1,6 +1,6 @@
 # Changelog
 
-A summary of changes and updates to ryOS, organized by month.
+A summary of changes and updates to syaOS, organized by month.
 
 ---
 
@@ -74,16 +74,16 @@ A summary of changes and updates to ryOS, organized by month.
 
 ## October 2025
 
-- Enhance ryOS Applet Viewer with new sharing, import/export, and content handling features.
+- Enhance syaOS Applet Viewer with new sharing, import/export, and content handling features.
 - Improve applet design guidelines for enhanced clarity and responsiveness.
-- Implement HTML generation and saving functionality for ryOS Applets.
+- Implement HTML generation and saving functionality for syaOS Applets.
 - Upgrade Zod library from v3 to v4.
 
 <details>
 <summary>Minor changes (10)</summary>
 
 - Add icon support and toast notifications for generated HTML applets.
-- Refactor chat and file management functionality in ryOS.
+- Refactor chat and file management functionality in syaOS.
 - Improve AI prompt instructions for app generation and Chinese responses.
 - Enhance MacDock component with emoji scaling and layout adjustments.
 - Update app icons and file handling for applets.
