@@ -117,8 +117,8 @@ export const useDisplaySettingsStore = create<DisplaySettingsState>()(
       setSelectedShaderType: (t) => set({ selectedShaderType: t }),
 
       // Wallpaper
-      currentWallpaper: "/wallpapers/photos/aqua/water.jpg",
-      wallpaperSource: "/wallpapers/photos/aqua/water.jpg",
+      currentWallpaper: "/wallpapers/photos/landscapes/refuge-col_de_la_grasse-alps.jpg",
+      wallpaperSource: "/wallpapers/photos/landscapes/refuge-col_de_la_grasse-alps.jpg",
       setCurrentWallpaper: (p) => set({ currentWallpaper: p, wallpaperSource: p }),
 
       setWallpaper: async (path) => {
